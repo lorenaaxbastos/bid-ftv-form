@@ -1,0 +1,22 @@
+{
+  "name": "React Styled Components LP",
+  "image": "node:lts",
+  "postCreateCommand": "npm install -g pnpm && pnpm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "styled-components.vscode-styled-components",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "christian-kohler.path-intellisense",
+        "naumovs.color-highlight",
+        "wayou.vscode-todo-highlight",
+        "kisstkondoros.vscode-gutter-preview",
+        "bradgashler.htmltagwrap",
+        "pranaygp.vscode-css-peek",
+        "editorconfig.editorconfig"
+      ]
+    }
+  },
+  "mounts": ["source=node_modules,target=/workspace/node_modules,type=volume"]
+}
