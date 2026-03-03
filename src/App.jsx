@@ -117,11 +117,11 @@ function App() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    if (number < 4) {
-      setNumber(number + 1);
-    } else {
+    if (number === 3) {
       console.log("Dados enviados com sucesso!", data);
       setNumber(4);
+    } else if (number < 3) {
+      setNumber(number + 1);
     }
   };
 
