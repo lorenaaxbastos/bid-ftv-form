@@ -27,7 +27,7 @@ const Navigation = styled.div`
   }
 `;
 
-function Section({ number, setNumber, data, handlers, options }) {
+function Section({ number, setNumber, data, handlers, meetingOptions, greOptions }) {
   const titles = {
     0: "Olá, professora! Olá, professor!",
     1: "Política de Privacidade",
@@ -43,8 +43,12 @@ function Section({ number, setNumber, data, handlers, options }) {
 
         {number === 0 && <Section1 />}
         {number === 1 && <Section2 data={data} handlers={handlers} />}
-        {number === 2 && <Section3 data={data} handlers={handlers} options={options} />}
-        {number === 3 && <Section4 data={data} handlers={handlers} />}
+        {number === 2 && (
+          <Section3 data={data} handlers={handlers} options={meetingOptions} />
+        )}
+        {number === 3 && (
+          <Section4 data={data} handlers={handlers} options={greOptions} />
+        )}
         {number === 4 && <Section5 data={data} />}
       </Container>
 

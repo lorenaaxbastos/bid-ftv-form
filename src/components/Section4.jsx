@@ -1,8 +1,9 @@
 import HighlightBox from "./HighlightBox";
 import Bold from "./Bold";
 import Input from "./Input";
+import Select from "./Select";
 
-function Section4({ data, handlers }) {
+function Section4({ data, handlers, options }) {
   const cpfIncompleto = data.cpf.length > 0 && data.cpf.length < 14;
 
   return (
@@ -53,6 +54,15 @@ function Section4({ data, handlers }) {
           value={data.email}
           onChange={(e) => handlers.setEmail(e.target.value)}
           helperText="Informe o endereço de e-mail que você utiliza com mais frequência, pois podemos, por meio dele, entrar em contato e enviar a certificação."
+          required
+        />
+
+        <Select
+          label="Qual é a sua Gerência Regional de Educação (GRE)?"
+          options={options}
+          value={data.gre}
+          onChange={(e) => handlers.setGre(e.target.value)}
+          helperText="Selecione a GRE responsável pela sua região de atuação."
           required
         />
       </div>

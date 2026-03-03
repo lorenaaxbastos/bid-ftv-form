@@ -61,6 +61,31 @@ const MEETINGS = [
   },
 ];
 
+const GRES = [
+  "01ª GRE - Parnaíba",
+  "02ª GRE - Barras",
+  "03ª GRE - Piripiri",
+  "04ª GRE - Teresina",
+  "05ª GRE - Campo Maior",
+  "06ª GRE - Regeneração",
+  "07ª GRE - Valença",
+  "08ª GRE - Oeiras",
+  "09ª GRE - Picos",
+  "10ª GRE - Floriano",
+  "11ª GRE - Uruçuí",
+  "12ª GRE - São João do Piauí",
+  "13ª GRE - São Raimundo Nonato",
+  "14ª GRE - Bom Jesus",
+  "15ª GRE - Corrente",
+  "16ª GRE - Fronteiras",
+  "17ª GRE - Paulistana",
+  "18ª GRE - Grande Teresina",
+  "19ª GRE - Grande Teresina",
+  "20ª GRE - Grande Teresina",
+  "21ª GRE - Grande Teresina",
+  "Ainda não sei em qual GRE vou atuar",
+];
+
 function App() {
   const [number, setNumber] = useState(0);
   const [acceptedTerms, setAcceptedTerms] = useState(false);
@@ -68,6 +93,7 @@ function App() {
   const [fullName, setFullName] = useState("");
   const [cpf, setCpf] = useState("");
   const [email, setEmail] = useState("");
+  const [gre, setGre] = useState("");
 
   const data = {
     acceptedTerms: acceptedTerms,
@@ -76,6 +102,7 @@ function App() {
     fullName: fullName,
     cpf: cpf,
     email: email,
+    gre: gre,
   };
 
   const handlers = {
@@ -84,6 +111,7 @@ function App() {
     setCpf: (val) => setCpf(maskCPF(val)),
     setEmail,
     setAcceptedTerms,
+    setGre,
   };
 
   const handleFormSubmit = (e) => {
@@ -108,7 +136,8 @@ function App() {
           setNumber={setNumber}
           data={data}
           handlers={handlers}
-          options={MEETINGS}
+          meetingOptions={MEETINGS}
+          greOptions={GRES}
         />
       </Form>
 

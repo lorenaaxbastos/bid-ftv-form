@@ -1,4 +1,4 @@
-import { useState } from "react"; // 1. Importação correta aqui
+import { useState } from "react";
 import styled from "styled-components";
 
 const InputWrapper = styled.div`
