@@ -2,6 +2,7 @@ import HighlightBox from "./HighlightBox";
 import Bold from "./Bold";
 import Input from "./Input";
 import Select from "./Select";
+import Textarea from "./Textarea";
 
 function Section4({ data, handlers, options }) {
   const cpfIncompleto = data.cpf.length > 0 && data.cpf.length < 14;
@@ -58,13 +59,31 @@ function Section4({ data, handlers, options }) {
         />
 
         <Select
-          label="Qual é a sua Gerência Regional de Educação (GRE)?"
+          label="À qual Diretoria Regional você estará vinculada(o)?"
           options={options}
           value={data.gre}
           onChange={(e) => handlers.setGre(e.target.value)}
           helperText="Selecione a GRE responsável pela sua região de atuação."
           required
         />
+
+        <Textarea
+          placeholder="Liste aqui a(s) escola(s)..."
+          value={data.schools}
+          onChange={(e) => handlers.setSchools(e.target.value)}
+          helperText="Este campo é opcional."
+        >
+          Se você já tiver essa informação, por favor indique também em qual(is) escola(s)
+          ministrará as disciplinas de{" "}
+          <span style={{ backgroundColor: "#b4f3fa" }}>
+            LÓGICA DE PROGRAMAÇÃO E MOTORES 2D
+          </span>{" "}
+          e{" "}
+          <span style={{ backgroundColor: "#b4f3fa" }}>
+            GAME DESIGN E NARRATIVA INTERATIVA
+          </span>
+          .
+        </Textarea>
       </div>
     </>
   );

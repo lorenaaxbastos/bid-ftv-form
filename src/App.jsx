@@ -94,6 +94,7 @@ function App() {
   const [cpf, setCpf] = useState("");
   const [email, setEmail] = useState("");
   const [gre, setGre] = useState("");
+  const [schools, setSchools] = useState("");
 
   const data = {
     acceptedTerms: acceptedTerms,
@@ -103,6 +104,7 @@ function App() {
     cpf: cpf,
     email: email,
     gre: gre,
+    schools: schools,
   };
 
   const handlers = {
@@ -112,6 +114,7 @@ function App() {
     setEmail,
     setAcceptedTerms,
     setGre,
+    setSchools,
   };
 
   const handleFormSubmit = (e) => {
