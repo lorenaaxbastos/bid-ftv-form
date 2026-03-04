@@ -36,7 +36,7 @@ const StyledTextarea = styled.textarea`
   }
 
   &::placeholder {
-    color: #ccc;
+    color: #666;
   }
 `;
 
